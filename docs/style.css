@@ -20,6 +20,7 @@ img{
     height: 100vh;
     background-color: #091921b3;
     position: relative;
+    overflow: hidden;
 }
 
 .clock{
@@ -112,9 +113,42 @@ img{
 .sc::before{
     content: '';
     position: absolute;
-    width: 1px;
+    width: 2px;
     height: 200px;
     background: white;
     border-radius: 6px 6px 0 0;
     z-index: 3;
+}
+@media screen and (max-width: 500px) {
+    .clock{
+        width: 310px;
+        height: 310px;
+    }
+    .clock-text h1{
+        font-size: 25px;
+    }
+    .clock-text span{
+        font-size: 13px;
+    }
+    .hour, .hr{
+    width: 210px;
+    height: 210px;
+    }
+    .min, .mn{
+        width: 250px;
+        height: 250px;
+    }
+    .sec, .sc{
+        width: 290px;
+        height: 290px;
+    }
+    .hr::before{
+        height: 105px;
+    }
+    .mn::before{
+        height: 125px;
+    }
+    .sc::before{
+        height: 170px;
+    }
 }
